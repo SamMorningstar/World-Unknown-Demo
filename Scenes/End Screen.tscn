@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=2]
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Assets/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Assets/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 14
+font_data = SubResource( 1 )
+
+[node name="MarginContainer" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+color = Color( 0.427451, 0.298039, 0.298039, 1 )
+
+[node name="Label" type="Label" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 6.0
+margin_top = 6.0
+margin_right = -1.0
+margin_bottom = -7.0
+custom_fonts/font = SubResource( 2 )
+text = "You and your guardian God make your way through the final maze and to the boss's dungeon where you make your way through the dungeon to find the god on his throne. In a heated battle between your guardian god and the enemy, you sneak your way to a suspicious looking machine, You put your hand towards it as a fireball shoots out and destroys the machine, removing the Veil around them, This makes the being visible again as this ends in a revolution that leads the humans to victory."
+autowrap = true
+
+[node name="Label3" type="Label" parent="ColorRect"]
+margin_left = 232.0
+margin_top = 159.0
+margin_right = 300.0
+margin_bottom = 173.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "-You win-"
+autowrap = true
+clip_text = true
+uppercase = true

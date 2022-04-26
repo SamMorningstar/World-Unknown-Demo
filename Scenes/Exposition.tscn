@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/Exposition.gd" type="Script" id=1]
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://Assets/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 13
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://Assets/Adventurer.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+font_data = SubResource( 6 )
+
+[node name="MarginContainer" type="MarginContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 320.0
+margin_bottom = 180.0
+color = Color( 0.427451, 0.298039, 0.298039, 1 )
+
+[node name="Label" type="Label" parent="ColorRect"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 6.0
+margin_right = -6.0
+margin_bottom = -36.0
+custom_fonts/font = SubResource( 2 )
+text = "In a world overrun by beings that can’t be perceived by normal humans, a boy cursed with magic can see and interact with the puzzles laid by those beings to trap humans. He is accompanied by a god who can’t see them or their traps cause of a curse by the king of the beings who set up the traps. He and the god have to go through the world to reach the boss."
+autowrap = true
+
+[node name="Label2" type="Label" parent="ColorRect"]
+margin_left = 28.0
+margin_top = 156.0
+margin_right = 337.0
+margin_bottom = 174.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 4 )
+text = "-PRESS SPACE TO VIEW TUTORIAL-"
