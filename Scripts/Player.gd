@@ -1,12 +1,12 @@
-extends KinematicBody2D
+extends CharacterBody2D
 
 const MAX = 100
-var velocity = Vector2.ZERO
+var vel = Vector2.ZERO
 var screensize
-onready var s = get_node("/root/States")
-onready var animationPlayer = $AnimationPlayer
-onready var animationTree = $AnimationTree
-onready var animationState = animationTree.get("parameters/playback")
+@onready var s = get_node("/root/States")
+@onready var animationPlayer = $AnimationPlayer
+@onready var animationTree = $AnimationTree
+@onready var animationState = animationTree.get("parameters/playback")
 
 func _ready():
 	screensize = get_viewport_rect().size
@@ -21,21 +21,21 @@ func _physics_process(delta):
 		animationTree.set("parameters/Idle/blend_position", input_vector)
 		animationTree.set("parameters/Run/blend_position", input_vector)
 		animationState.travel("Run")
-		velocity=input_vector
+		vel=input_vector
 	else:
 		animationState.travel("Idle")
-		velocity=Vector2.ZERO
+		vel=Vector2.ZERO
 	
 	position += input_vector * delta
 	position.x = clamp(position.x, 0, screensize.x)
 	position.y = clamp(position.y, 0, screensize.y)
 	
-	var collide = move_and_collide(velocity*delta*MAX)
+	var collide = move_and_collide(vel*delta*MAX)
 	if (collide):
 		$Label.set_visible(true)
-		velocity=0
+		vel=0
 	else:
 		$Label.set_visible(false)
 
 func _on_Area2D_body_entered(body):
-	get_tree().change_scene("res://Scenes/Next Level.tscn")
+	get_tree().change_scene_to_file("res://Scenes/Next Level.tscn")

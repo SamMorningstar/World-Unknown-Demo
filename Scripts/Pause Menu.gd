@@ -1,6 +1,6 @@
 extends Control
 
-var is_paused = false setget set_is_paused
+var is_paused = false: set = set_is_paused
 
 func _unhandled_input(event):
 	if event.is_action_pressed("ui_cancel"):
@@ -12,8 +12,8 @@ func set_is_paused(value):
 	visible = is_paused
 
 func _on_Resume_pressed():
-	self.is_paused=false
+	self.set_is_paused(false)
 
 func _on_MM_pressed():
-	get_tree().change_scene("res://Scenes/Main Menu.tscn")
-	self.is_paused=false
+	get_tree().change_scene_to_file("res://Scenes/Main Menu.tscn")
+	self.set_is_paused(false)

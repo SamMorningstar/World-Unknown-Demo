@@ -1,92 +1,138 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=3 uid="uid://facien4potrk"]
 
-[ext_resource path="res://Scenes/GUI.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Scripts/Level 4.gd" type="Script" id=3]
-[ext_resource path="res://Assets/World Assets/TX Tileset Grass.png" type="Texture" id=4]
-[ext_resource path="res://Assets/World Assets/TX Props.png" type="Texture" id=5]
+[ext_resource type="PackedScene" uid="uid://cv2cig21gu0qf" path="res://Scenes/GUI.tscn" id="1"]
+[ext_resource type="PackedScene" uid="uid://btpq1eepb5615" path="res://Scenes/Player.tscn" id="2"]
+[ext_resource type="Script" uid="uid://c11fjlqg2slgq" path="res://Scripts/Level 4.gd" id="3"]
+[ext_resource type="Texture2D" uid="uid://b0munkqow4e2y" path="res://Assets/World Assets/TX Tileset Grass.png" id="4"]
+[ext_resource type="Texture2D" uid="uid://yxbyyn7mrsfe" path="res://Assets/World Assets/TX Props.png" id="5"]
 
-[sub_resource type="TileSet" id=5]
-0/name = "TX Props.png 0"
-0/texture = ExtResource( 5 )
-0/tex_offset = Vector2( 0, 0 )
-0/modulate = Color( 1, 1, 1, 1 )
-0/region = Rect2( 352, 256, 96, 96 )
-0/tile_mode = 0
-0/occluder_offset = Vector2( 0, 0 )
-0/navigation_offset = Vector2( 0, 0 )
-0/shape_offset = Vector2( 0, 0 )
-0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-0/shape_one_way = false
-0/shape_one_way_margin = 0.0
-0/shapes = [  ]
-0/z_index = 1
-1/name = "TX Tileset Grass.png 1"
-1/texture = ExtResource( 4 )
-1/tex_offset = Vector2( 0, 0 )
-1/modulate = Color( 1, 1, 1, 1 )
-1/region = Rect2( 64, 0, 96, 64 )
-1/tile_mode = 0
-1/occluder_offset = Vector2( 0, 0 )
-1/navigation_offset = Vector2( 0, 0 )
-1/shape_offset = Vector2( 0, 0 )
-1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-1/shape_one_way = false
-1/shape_one_way_margin = 0.0
-1/shapes = [  ]
-1/z_index = 0
-2/name = "TX Tileset Grass.png 2"
-2/texture = ExtResource( 4 )
-2/tex_offset = Vector2( 0, 0 )
-2/modulate = Color( 1, 1, 1, 1 )
-2/region = Rect2( 0, 160, 32, 32 )
-2/tile_mode = 0
-2/occluder_offset = Vector2( 0, 0 )
-2/navigation_offset = Vector2( 0, 0 )
-2/shape_offset = Vector2( 0, 0 )
-2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
-2/shape_one_way = false
-2/shape_one_way_margin = 0.0
-2/shapes = [  ]
-2/z_index = 0
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jhw3v"]
+texture = ExtResource("5")
+margins = Vector2i(352, 256)
+texture_region_size = Vector2i(96, 96)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/0/z_index = 1
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/1/z_index = 1
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/2/z_index = 1
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/3/z_index = 1
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/4/z_index = 1
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/5/z_index = 1
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/6/z_index = 1
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+0:0/7/z_index = 1
 
-[sub_resource type="RectangleShape2D" id=6]
-extents = Vector2( 12.8, 9 )
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_klt0p"]
+texture = ExtResource("4")
+margins = Vector2i(64, 0)
+texture_region_size = Vector2i(96, 64)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4j6h5"]
+texture = ExtResource("4")
+margins = Vector2i(0, 160)
+texture_region_size = Vector2i(32, 32)
+0:0/next_alternative_id = 8
+0:0/0 = 0
+0:0/1 = 1
+0:0/1/flip_h = true
+0:0/2 = 2
+0:0/2/flip_v = true
+0:0/3 = 3
+0:0/3/flip_h = true
+0:0/3/flip_v = true
+0:0/4 = 4
+0:0/4/transpose = true
+0:0/5 = 5
+0:0/5/flip_h = true
+0:0/5/transpose = true
+0:0/6 = 6
+0:0/6/flip_v = true
+0:0/6/transpose = true
+0:0/7 = 7
+0:0/7/flip_h = true
+0:0/7/flip_v = true
+0:0/7/transpose = true
+
+[sub_resource type="TileSet" id="5"]
+sources/0 = SubResource("TileSetAtlasSource_jhw3v")
+sources/1 = SubResource("TileSetAtlasSource_klt0p")
+sources/2 = SubResource("TileSetAtlasSource_4j6h5")
+
+[sub_resource type="RectangleShape2D" id="6"]
+size = Vector2(25.6, 18)
 
 [node name="Level 4" type="Node2D"]
-script = ExtResource( 3 )
+script = ExtResource("3")
 
-[node name="World" type="Sprite" parent="."]
-position = Vector2( 160, 129 )
-scale = Vector2( 1.25, 1 )
+[node name="World" type="Sprite2D" parent="."]
+position = Vector2(160, 129)
+scale = Vector2(1.25, 1)
 
 [node name="TileMap" type="TileMap" parent="World"]
-tile_set = SubResource( 5 )
-cell_size = Vector2( 16, 16 )
-format = 1
-tile_data = PoolIntArray( -458760, 1, 0, -458754, 1, 0, -524286, 1, 0, -196616, 1, 0, -196613, 1, 0, -196610, 1, 0, -262140, 1, 0, -131070, 0, 0, -131068, 2, 0, -131066, 2, 0, -65534, 2, 0, -65533, 2, 0, -65531, 2, 0, -65529, 2, 0, 65527, 1, 0, 65533, 1, 0, 2, 2, 0, 3, 2, 0, 5, 2, 0, 7, 2, 0, 8, 2, 0, 65538, 2, 0, 65539, 2, 0, 65544, 2, 0, 131078, 2, 0, 131079, 2, 0, 196610, 2, 0, 196611, 2, 0, 196613, 2, 0, 196614, 2, 0 )
+tile_set = SubResource("5")
+format = 2
+layer_0/tile_data = PackedInt32Array(-458760, 1, 0, -458754, 1, 0, -524286, 1, 0, -196616, 1, 0, -196613, 1, 0, -196610, 1, 0, -131066, 1, 0, -65529, 2, 0, 65527, 1, 0, 65533, 1, 0, 7, 2, 0, 8, 2, 0, 65538, 2, 0, 65539, 2, 0, 65544, 2, 0, 131078, 2, 0, 131079, 2, 0, 196610, 2, 0, 196611, 2, 0, 196613, 2, 0, 196614, 2, 0, -524282, 1, 0, -524283, 1, 0, -524284, 1, 0, -524285, 1, 0, -524287, 1, 0, -524288, 1, 0, -458753, 1, 0, -458755, 1, 0, -458756, 1, 0, -458757, 1, 0, -458758, 1, 0, -458759, 1, 0, -458761, 1, 0, -393225, 1, 0, -393226, 1, 0, -393227, 1, 0, -327691, 1, 0, -327692, 1, 0, -262156, 1, 0, -262157, 1, 0, -196621, 1, 0, -131085, 1, 0, -65549, 1, 0, -13, 1, 0, 65523, 1, 0, 131059, 1, 0, 131060, 1, 0, 196596, 1, 0, 196597, 1, 0, 262133, 1, 0, 327669, 1, 0, 327670, 1, 0, 327671, 1, 0, 327672, 1, 0, 327673, 1, 0, 327674, 1, 0, 327675, 1, 0, 327676, 1, 0, 327677, 1, 0, 327678, 1, 0, 262142, 1, 0, 393213, 1, 0, 458749, 1, 0, 458750, 1, 0, 524286, 1, 0, 524287, 1, 0, 458751, 1, 0, 393216, 1, 0, 393217, 1, 0, 393218, 1, 0, 393219, 1, 0, 393220, 1, 0, 393221, 1, 0, 393222, 1, 0, 393223, 1, 0, 393224, 1, 0, 393225, 1, 0, 393226, 1, 0, 327690, 1, 0, 327691, 1, 0, 262155, 1, 0, 262156, 1, 0, 196620, 1, 0, 131084, 1, 0, 65548, 1, 0, 12, 1, 0, -65524, 1, 0, -131060, 1, 0, -131061, 1, 0, -196597, 1, 0, -262133, 1, 0, -262134, 1, 0, -327670, 1, 0, -327669, 1, 0, -393205, 1, 0, -458741, 1, 0, 4, 0, 0, 65540, 2, 0, 131076, 2, 0, 65541, 2, 0, 131077, 2, 0, 6, 2, 0, 65543, 2, 0, -1, 1, 0, -65536, 1, 0, -131072, 1, 0, -131071, 1, 0, -196607, 1, 0, -327676, 1, 0, -327675, 1, 0, -327674, 1, 0, -524276, 1, 0)
 
 [node name="Area2D" type="Area2D" parent="World"]
-position = Vector2( 80, 16 )
+position = Vector2(80, 16)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="World/Area2D"]
-position = Vector2( 0.800003, 0 )
-shape = SubResource( 6 )
+position = Vector2(0.800003, 0)
+shape = SubResource("6")
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 302, 17 )
+[node name="Player" parent="." instance=ExtResource("2")]
+position = Vector2(302, 17)
 
 [node name="Maze" type="StaticBody2D" parent="."]
-position = Vector2( 146, 41 )
+position = Vector2(146, 41)
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="Maze"]
-position = Vector2( 18, 29 )
-polygon = PoolVector2Array( -100, 8, -115, -16, -6, -38, 153, -14, 157, 33, 97, 35, 8, 55, 3, 43, 139, 23, 141, 0, -21, -7 )
+position = Vector2(18, 29)
+polygon = PackedVector2Array(-100, 8, -115, -16, -6, -38, 153, -14, 157, 33, 97, 35, 11, 29, 13, 25, 144, 25, 141, 0, -21, -7)
 
 [node name="CollisionShape2D2" type="CollisionPolygon2D" parent="Maze"]
-position = Vector2( -80, 156 )
-polygon = PoolVector2Array( -36, -73, -40, -98, -19, -94, 23, -73, 63, -86, 117, -72, 142, -50, 35, -32 )
+position = Vector2(-81, 170)
+polygon = PackedVector2Array(-36, -73, -40, -98, -19, -94, 23, -73, 63, -86, 117, -72, 142, -50, 35, -32)
 
-[node name="GUI" parent="." instance=ExtResource( 1 )]
+[node name="GUI" parent="." instance=ExtResource("1")]
 
 [connection signal="body_entered" from="World/Area2D" to="Player" method="_on_Area2D_body_entered"]

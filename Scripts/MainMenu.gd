@@ -2,11 +2,11 @@ extends MarginContainer
 
 const GAME_STATES=["res://Scenes/Exposition.tscn","res://Scenes/Options.tscn","res://Scenes/Level Select.tscn"]
 
-onready var selector_a = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/Selector
-onready var selector_d = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4/HBoxContainer/Selector
-onready var selector_b = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer/Selector
-onready var selector_c = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer/Selector
-onready var current_selection = 0
+@onready var selector_a = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer/HBoxContainer/Selector
+@onready var selector_d = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer4/HBoxContainer/Selector
+@onready var selector_b = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer2/HBoxContainer/Selector
+@onready var selector_c = $CenterContainer/VBoxContainer/CenterContainer2/VBoxContainer/CenterContainer3/HBoxContainer/Selector
+@onready var current_selection = 0
 
 func _ready():
 	set_Current_Selection(0)
@@ -23,11 +23,11 @@ func _process(delta):
 		
 func handle_selection(_current_selection):
 	if _current_selection == 0:
-		get_tree().change_scene(GAME_STATES[0])
+		get_tree().change_scene_to_file(GAME_STATES[0])
 	elif _current_selection == 1:
-		get_tree().change_scene(GAME_STATES[2])
+		get_tree().change_scene_to_file(GAME_STATES[2])
 	elif _current_selection == 2:
-		get_tree().change_scene(GAME_STATES[1])
+		get_tree().change_scene_to_file(GAME_STATES[1])
 	elif _current_selection == 3:
 		get_tree().quit()
 	
